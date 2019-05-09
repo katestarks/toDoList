@@ -1,5 +1,7 @@
 <?php
 
+namespace Portal\Models;
+
 class ListModel {
 
     public $db;
