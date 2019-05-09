@@ -3,20 +3,20 @@
 namespace Portal\Controllers;
 
 use Portal\Models\ListModel;
-use Slim\Views\PhpRenderer;
 
 class AddTaskController {
 
     public $listModel;
-    public $renderer;
 
-    public function __construct(PhpRenderer $renderer, ListModel $listModel) {
+    public function __construct(ListModel $listModel) {
         $this->listModel = $listModel;
-        $this->renderer = $renderer;
     }
 
-    public function ___invoke($request, $response, $args) {
-
+    public function __invoke($request, $response, $args) {
+        $userData = $request->getParsedBody();
+        $addTask = $userData['addTask'];
+        $this->listModel->addTask($addTask);
+        return $response->withRedirect('/');
     }
 
 }

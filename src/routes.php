@@ -6,6 +6,5 @@ return function (App $app) {
     $container = $app->getContainer();
 
     $app->get('/', 'ViewListController');
-    $app->get('/addTask', //TODO: add callable);
-
+    $app->post('/addTask', 'AddTaskController');
 };

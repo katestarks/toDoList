@@ -31,4 +31,5 @@ return function (App $app) {
     // factory classes
     $container['ListModel'] = new \Portal\Factories\ListModelFactory();
     $container['ViewListController'] = new \Portal\Factories\ViewListControllerFactory();
+    $container['AddTaskController'] = new \Portal\Factories\AddTaskControllerFactory();
 };
