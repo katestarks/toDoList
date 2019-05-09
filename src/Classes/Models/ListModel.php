@@ -2,7 +2,7 @@
 
 class ListModel {
 
-    $db;
+    public $db;
 
     public function __construct($db)
     {
