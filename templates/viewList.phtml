@@ -1,3 +1,23 @@
-<? foreach ($lists as $list) {
-    var_dump($list);
-}
+<html lang="eng">
+<head>
+    <title>You can do it</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/viewList.css">
+</head>
+<body>
+    <main class="col-6 offset-3">
+
+        <div>
+            <h1>Your tasks to do:</h1>
+            <small class="text-muted">It's easy once you've started...</small>
+        </div>
+        <?php
+
+        foreach ($tasks as $task) {
+            echo '<p>' . $task['tasks'] . '</p>';
+        }
+
+        ?>
+    </main>
+</body>
+</html>
