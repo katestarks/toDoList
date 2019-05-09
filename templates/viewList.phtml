@@ -13,7 +13,7 @@
         </div>
         <?php
         foreach ($tasks as $task) {
-            echo '<div><form method="post" action="/completedFlag"><p>' . $task['tasks'] . '</p><input type="hidden" value=' . $task['id'] . '><input name="completedFlag" type="submit" value="Completed"></form></div>';
+            echo '<div><form method="post" action="/completedFlag"><p>' . $task['tasks'] . '</p><input name ="id" type="hidden" value=' . $task['id'] . '><input name="completedFlag" type="submit" value="Completed"></form></div>';
         }
         ?>
         <div>
