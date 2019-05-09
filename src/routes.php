@@ -7,4 +7,5 @@ return function (App $app) {
 
     $app->get('/', 'ViewListController');
     $app->post('/addTask', 'AddTaskController');
+    $app->post('/completedFlag', 'CompleteTaskController');
 };
