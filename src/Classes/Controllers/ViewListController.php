@@ -19,6 +19,7 @@ class ViewListController {
     public function __invoke($request, $response, $args)
     {
         $args['tasks'] = $this->listModel->viewList();
+        $args['id'] = $this->listModel->viewList();
         $this->renderer->render($response, 'viewList.phtml', $args);
     }
 }
