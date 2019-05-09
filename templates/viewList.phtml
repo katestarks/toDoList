@@ -11,13 +11,14 @@
             <h1>Your tasks to do:</h1>
             <small class="text-muted">It's easy once you've started...</small>
         </div>
+        <form method="post" action="/completedFlag">
         <?php
 
         foreach ($tasks as $task) {
-            echo '<p>' . $task['tasks'] . '</p>';
+            echo '<div><p>' . $task['tasks'] . '</p><input name="completedFlag" type="submit" value="Completed"</div>';
         }
-
         ?>
+        </form>
         <div>
             <form method="post" action="/addTask">
                 <input name="addTask" type="text">
