@@ -19,9 +19,9 @@
 
         ?>
         <div>
-            <form>
-                <input type="text">
-                <input action="/addTask" type="submit" value="Add task" >
+            <form method="post" action="/addTask">
+                <input name="addTask" type="text">
+                <input  type="submit" value="Add task" >
             </form>
         </div>
     </main>
