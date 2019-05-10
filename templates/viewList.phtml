@@ -17,7 +17,7 @@
                 <input name="randomTask" type="submit" value="Task lottery here!"><input name="randomGenerator" type="hidden" value="1">
             </form>
             <?php
-            if (isset($_SESSION['randomTask'])) {
+            if (isset($_SESSION['randomGenerator'])) {
                 echo $randomTask["tasks"];
             }
             ?>
