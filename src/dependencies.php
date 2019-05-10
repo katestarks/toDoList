@@ -33,4 +33,5 @@ return function (App $app) {
     $container['ViewListController'] = new \Portal\Factories\ViewListControllerFactory();
     $container['AddTaskController'] = new \Portal\Factories\AddTaskControllerFactory();
     $container['CompleteTaskController'] = new \Portal\Factories\CompleteTaskControllerFactory();
+    $container['RandomTaskController'] = new \Portal\Factories\RandomTaskControllerFactory();
 };
