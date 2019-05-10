@@ -17,8 +17,6 @@
                 <input name="randomTask" type="submit" value="Task lottery here!">
             </form>
             <?php
-            $randKey = array_rand($tasks, 1);
-            $randomTask = $tasks[$randKey];
             echo $randomTask["tasks"];
             ?>
         </div>

@@ -28,4 +28,9 @@ class ListModel {
         $query->bindParam(':id', $id);
         return $query->execute();
     }
+
+    public function getRandomTask($tasks) {
+        $randKey = array_rand($tasks, 1);
+        return $randomTask = $tasks[$randKey];
+    }
 }
