@@ -11,11 +11,23 @@
             <h3>Your tasks to do:</h3>
             <blockquote class="blockquote">The sooner you start, the sooner you'll finish</blockquote>
         </div>
-        <div class="card">
+        <div>
+            <p>I can't decide! Suggest a task for me:</p>
+            <form method="post" action="/randomTask">
+                <input name="randomTask" type="submit" value="Task lottery here!"><input name="randomGenerator" type="hidden" value="1">
+            </form>
+            <?php
+            if (isset($_SESSION['randomGenerator'])) {
+                echo $randomTask["tasks"];
+            }
+            ?>
+        </div>
+        <div>
             <?php
             foreach ($tasks as $task) {
-                echo '<div class="align-middle"><form method="post" action="/completedFlag"><p>' . $task['tasks'] . '</p><input name ="id" type="hidden" value=' . $task['id'] . '><input class="completedButton" name="completedFlag" type="submit" value="Completed"></form></div>';
-            } ?>
+                echo '<div><form method="post" action="/completedFlag"><p>' . $task['tasks'] . '</p><input name ="id" type="hidden" value=' . $task['id'] . '><input name="completedFlag" type="submit" value="Completed"></form></div>';
+            }
+//          ?>
         </div>
         <div>
             <form method="post" action="/addTask">
