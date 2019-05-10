@@ -14,7 +14,7 @@
         <div>
             <p>I can't decide! Suggest a task for me:</p>
             <form method="post" action="/randomTask">
-                <input name="randomTask" type="submit" value="Task lottery here!">
+                <input name="randomTask" type="submit" value="Task lottery here!"><input name="randomGenerator" type="hidden" value="1">
             </form>
             <?php
             echo $randomTask["tasks"];
