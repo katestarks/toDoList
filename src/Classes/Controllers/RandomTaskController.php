@@ -18,8 +18,9 @@ class RandomTaskController {
 
     public function __invoke($request, $response, $args)
     {
-        $userData = $request->getParsedBody();
-        $_SESSION['randomGenerator'] = $userData['randomGenerator'];
+        $args['tasks'] = $this->listModel->viewList();
+        $args['randomTask'] = $this->listModel->getRandomTask($args['tasks']);
+        $_SESSION['randomGenerator'] = $args['randomTask'];
         return $response->withRedirect('/');
     }
 }

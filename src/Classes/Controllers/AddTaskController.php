@@ -18,5 +18,4 @@ class AddTaskController {
         $this->listModel->addTask($addTask);
         return $response->withRedirect('/');
     }
-
 }
