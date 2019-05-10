@@ -5,7 +5,7 @@ namespace Portal\Controllers;
 use Portal\Models\ListModel;
 use Slim\Views\PhpRenderer;
 
-class ViewListController {
+class RandomTaskController {
 
     public $renderer;
     public $listModel;
@@ -18,9 +18,8 @@ class ViewListController {
 
     public function __invoke($request, $response, $args)
     {
-        $args['tasks'] = $this->listModel->viewList();
-        $args['id'] = $this->listModel->viewList();
-        $args['randomTask'] = $this->listModel->getRandomTask($args['tasks']);
-        $this->renderer->render($response, 'viewList.phtml', $args);
+        $userData = $request->getParsedBody();
+        $_SESSION['randomGenerator'] = $userData['randomGenerator'];
+        return $response->withRedirect('/');
     }
 }
