@@ -20,7 +20,6 @@ class ViewListController {
     {
         $args['tasks'] = $this->listModel->viewList();
         $args['id'] = $this->listModel->viewList();
-        $args['randomTask'] = $this->listModel->getRandomTask($args['tasks']);
         $this->renderer->render($response, 'viewList.phtml', $args);
     }
 }
