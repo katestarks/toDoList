@@ -18,6 +18,8 @@ class RandomTaskController {
 
     public function __invoke($request, $response, $args)
     {
-        // TODO: Implement __invoke() method.
+        $userData = $request->getParsedBody();
+        $_SESSION['randomGenerator'] = $userData['randomGenerator'];
+        return $response->withRedirect('/');
     }
 }
