@@ -1,7 +1,8 @@
-main {
-    background-color: antiquewhite;
-}
 
 p {
     display: inline-block;
+}
+
+.completedButton {
+    float: right;
 }
