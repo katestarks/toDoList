@@ -8,4 +8,5 @@ return function (App $app) {
     $app->get('/', 'ViewListController');
     $app->post('/addTask', 'AddTaskController');
     $app->post('/completedFlag', 'CompleteTaskController');
+    $app->get('/randomTask', //TODO: add callable);
 };
