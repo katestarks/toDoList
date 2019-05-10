@@ -12,14 +12,22 @@
             <small class="text-muted">It's easy once you've started...</small>
         </div>
         <div>
-            Randomised task here
+            <p>I can't decide! Suggest a task for me:</p>
+            <form method="post" action="/randomTask">
+                <input name="randomTask" type="submit" value="Task lottery here!">
+            </form>
+            <?php
+            $randKey = array_rand($tasks, 1);
+            $randomTask = $tasks[$randKey];
+            echo $randomTask["tasks"];
+            ?>
         </div>
         <div>
-        <?php
-        foreach ($tasks as $task) {
-            echo '<div><form method="post" action="/completedFlag"><p>' . $task['tasks'] . '</p><input name ="id" type="hidden" value=' . $task['id'] . '><input name="completedFlag" type="submit" value="Completed"></form></div>';
-        }
-        ?>
+            <?php
+            foreach ($tasks as $task) {
+                echo '<div><form method="post" action="/completedFlag"><p>' . $task['tasks'] . '</p><input name ="id" type="hidden" value=' . $task['id'] . '><input name="completedFlag" type="submit" value="Completed"></form></div>';
+            }
+//          ?>
         </div>
         <div>
             <form method="post" action="/addTask">
